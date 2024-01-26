@@ -28,7 +28,7 @@
         <div class="mb-3">
             <label for="categoryId" class="form-label"><b>Category</b></label>
             @*<input type="text" class="form-control" id="categoryId" name="CategoryId">*@
-            @Html.DropDownListFor(c=>c.CategoryId, (List<SelectListItem>) ViewBag.values, new { @class = "form-control", id = "categoryId"} )
+            @Html.DropDownListFor(c => c.CategoryId, (List<SelectListItem>)ViewBag.values, new { @class = "form-control", id = "categoryId" })
         </div>
         <div class="mb-3">
             <label for="description" class="form-label"><b>Description</b></label>
@@ -42,9 +42,9 @@
             <label for="projecturl" class="form-label"><b>Project Url</b></label>
             <input type="text" class="form-control" id="projecturl" name="ProjectUrl">
         </div>
-        <button type="submit" class="btn btn-outline-primary">Submit New Project</button>
+        <button type="submit" class="btn btn-outline-primary">Submit New Project</button>        
+        <td><a href="/Project/Index/" type="button" class="btn btn-outline-success">Go Back To Project List</a></td>
     </form>
-
     <!-- End Example Code -->
 </body>
 </html>
