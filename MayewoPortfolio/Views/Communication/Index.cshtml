@@ -1,0 +1,37 @@
+﻿@model List<MayewoPortfolio.Models.Communication>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Communication List</h2>
+
+<table class="table table-hover">
+    <tr class="table-info">
+        <th>Id</th>
+        <th>Sender</th>
+        <th>Email</th>
+        <th>Category Id</th>
+        <th>Message</th>
+        <th>Sending Date</th>
+        <th>Statu</th>
+        <th>Update</th>
+        <th>Remove</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.ContactId</td>
+    <td>@item.NameSurname</td>
+    <td>@item.Email</td>
+    <td>@item.CatgoryId</td>
+    <td>@item.Message</td>
+    <td>@item.SendDate</td>
+    <td>@item.IsRead</td>
+
+    <td><a href="#" type="button" class="btn btn-outline-success">Update</a></td>
+    <td><a href="#" type="button" class="btn btn-outline-danger">Remove</a></td>
+</tr>
+    }
+</table>
+<td><a href="/Communication/CreateNewCommunication" type="button" class="btn btn-outline-primary">Create New Communicatoin</a></td>
