@@ -42,6 +42,7 @@ namespace MayewoPortfolio.Controllers
             var values = myPortfolioEntities.Services.ToList();
             return PartialView(values);
         }
+
         public PartialViewResult TestimonialPartial()
         {
             var values = myPortfolioEntities.Testimonials.ToList();
@@ -53,11 +54,19 @@ namespace MayewoPortfolio.Controllers
             var values = myPortfolioEntities.Projects.ToList();
             return PartialView(values);
         }
-
+        public PartialViewResult CommunicationPartial()
+        {
+            var values = myPortfolioEntities.Communications.ToList();
+            return PartialView(values);
+        }
         public PartialViewResult SocialMediaPartial()
         {
             var values = myPortfolioEntities.SocialMedias.ToList();
             return PartialView(values);
+        }
+        public PartialViewResult ScriptPartial()
+        {           
+            return PartialView();
         }
     }
 }
