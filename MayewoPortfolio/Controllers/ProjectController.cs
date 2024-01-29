@@ -39,5 +39,13 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("CreateNewProject");
         }
+
+        public ActionResult RemoveProject(int id)
+        {
+            var removeproject = myPortfolioEntities.Projects.Find(id);
+            myPortfolioEntities.Projects.Remove(removeproject);
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -28,5 +28,13 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return View();
         }
+
+        public ActionResult RemoveSocialMedia(int id)
+        {
+            var removesocialmedia = myPortfolioEntities.SocialMedias.Find(id);
+            myPortfolioEntities.SocialMedias.Remove(removesocialmedia);
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

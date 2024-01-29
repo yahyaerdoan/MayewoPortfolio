@@ -29,5 +29,13 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return View();
         }
+
+        public ActionResult RemoveFeature(int id)
+        {
+            var removefeature = myPortfolioEntities.Futures.Find(id);
+            myPortfolioEntities.Futures.Remove(removefeature);
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }        
     }
 }

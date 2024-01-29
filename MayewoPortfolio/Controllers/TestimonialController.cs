@@ -28,5 +28,13 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return View();
         }
+
+        public ActionResult RemoveTestimonial(int id)
+        {
+            var removeteestimonial = myPortfolioEntities.Testimonials.Find(id);
+            myPortfolioEntities.Testimonials.Remove(removeteestimonial);
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
