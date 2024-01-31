@@ -1,0 +1,54 @@
+﻿@model MayewoPortfolio.Models.Project
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title"> Update Project</h5>
+        </div>
+        <div class="card-body" style="background-color:ghostwhite">
+            <div class="mb-3">
+                <form method="post" action="">
+
+
+                    <label for="projectid" class="form-label"><b>Project Id</b></label>
+                    <input type="text" class="form-control" id="projectid" value="@Model.ProjectId" name="ProjectId">
+
+                    <label for="categoryid" class="form-label"><b>Category</b></label>
+                    @*<input type="text" class="form-control" id="categoryid" value="@Model.Category.Name" name="CategoryId">*@
+                    @Html.DropDownListFor(c => c.CategoryId, (List<SelectListItem>)ViewBag.values, new { @class = "form-control", id = "categoryid" })
+
+                    <label for="title" class="form-label"><b>Title</b></label>
+                    <input type="text" class="form-control" id="title" value="@Model.Title" name="Title">
+
+                    <label for="description" class="form-label"><b>Description</b></label>
+                    <textarea class="form-control" id="description" name="Description" rows="6">@Model.Description</textarea>
+
+                    <label for="imageurl" class="form-label"><b>Image Url</b></label>
+                    <input type="text" class="form-control" id="imageurl" value="@Model.ImageUrl" name="ImageUrl">
+
+                    <label for="projecturl" class="form-label"><b>Github Url</b></label>
+                    <input type="text" class="form-control" id="projecturl" value="@Model.ProjectUrl" name="ProjectUrl">
+
+                    <button type="submit" class="btn btn-outline-success">Save Changes</button>
+                    <button href="/Project/Index/" type="submit" class="btn btn-outline-warning">Go Back</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

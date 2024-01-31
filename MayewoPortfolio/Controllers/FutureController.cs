@@ -36,6 +36,25 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.Futures.Remove(removefeature);
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
-        }        
+        }
+
+        [HttpGet]
+        public ActionResult UpdateFuture(int id)
+        {
+            var value = myPortfolioEntities.Futures.Find(id);
+            return View(value);
+        }
+        
+        [HttpPost]
+        public ActionResult UpdateFuture(Future future)
+        {
+            var value = myPortfolioEntities.Futures.Find(future.FutureId);
+            value.NameSurname = future.NameSurname;
+            value.Title = future.Title;
+            value.Header = future.Header;
+            value.Title = future.Title;
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
-}
+}  

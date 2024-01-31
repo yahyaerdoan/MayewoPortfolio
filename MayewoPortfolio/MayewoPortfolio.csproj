@@ -572,6 +572,8 @@
     <Content Include="Views\Service\UpdateService.cshtml" />
     <Content Include="Views\Category\UpdateCategory.cshtml" />
     <Content Include="Views\Communication\UpdateCommunication.cshtml" />
+    <Content Include="Views\Future\UpdateFuture.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
