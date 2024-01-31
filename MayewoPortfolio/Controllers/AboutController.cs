@@ -37,19 +37,21 @@ namespace MayewoPortfolio.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
         public ActionResult UpdateAbout(int id)
         {
-            var updateabout = myPortfolioEntities.Aboutes.Find(id);
-            return View("UpdateAbout", updateabout);
+            var value = myPortfolioEntities.Aboutes.Find(id);
+            return View(value);
         }
 
+        [HttpPost]
         public ActionResult UpdateAbout(Aboute aboute)
         {
-            var updateaboute = myPortfolioEntities.Aboutes.Find(aboute.AboutId);
-            updateaboute.Title = aboute.Title;
-            updateaboute.Header = aboute.Header;
-            updateaboute.Description = aboute.Description;
-            updateaboute.ImageUrl = aboute.ImageUrl;
+            var value = myPortfolioEntities.Aboutes.Find(aboute.AboutId);
+            value.Title = aboute.Title;
+            value.Header = aboute.Header;
+            value.Description = aboute.Description;
+            value.ImageUrl = aboute.ImageUrl;
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
         }

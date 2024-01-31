@@ -37,5 +37,20 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult UpdateCategory (int id)
+        {
+            var value = myPortfolioEntities.Categories.Find(id);
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateCategory(Category category)
+        {
+            var value = myPortfolioEntities.Categories.Find(category.CategoryId);
+            value.Name = category.Name;
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

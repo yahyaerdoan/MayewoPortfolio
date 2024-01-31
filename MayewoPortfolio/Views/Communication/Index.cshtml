@@ -20,18 +20,24 @@
     </tr>
     @foreach (var item in Model)
     {
-<tr>
-    <td>@item.ContactId</td>
-    <td>@item.NameSurname</td>
-    <td>@item.Email</td>
-    <td>@item.CatgoryId</td>
-    <td>@item.Message</td>
-    <td>@item.SendDate</td>
-    <td>@item.IsRead</td>
+        <tr>
+            <td>@item.ContactId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Email</td>
+            <td>@item.CatgoryId</td>
+            <td>@item.Message</td>
+            <td>@item.SendDate</td>
+            <td>@item.IsRead</td>
 
-    <td><a href="/Communication/Update/@item.ContactId" type="button" class="btn btn-outline-success">Update</a></td>
-    <td><a href="/Communication/RemoveCommunicaton/@item.ContactId" type="button" class="btn btn-outline-danger">Remove</a></td>
-</tr>
+            <td>
+                <a href="/Communication/UpdateCommunication/@item.ContactId" type="button" class="btn btn-outline-success">Update</a>
+            </td>
+            <td>
+                <a href="/Communication/RemoveCommunicaton/@item.ContactId" type="button" class="btn btn-outline-danger">Remove</a>
+            </td>
+        </tr>
     }
 </table>
-<td><a href="/Communication/CreateNewCommunication" type="button" class="btn btn-outline-primary">Create New Communicatoin</a></td>
+<td>
+    <a href="/Communication/CreateNewCommunication" type="button" class="btn btn-outline-primary">Create New Communicatoin</a>
+</td>

@@ -36,5 +36,23 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult UpdateService(int id)
+        {
+            var value = myPortfolioEntities.Services.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateService(Service service)
+        {
+            var value = myPortfolioEntities.Services.Find(service.ServiceId);
+            value.Title = service.Title;           
+            value.Description = service.Description;
+            value.ImageUrl = service.ImageUrl;
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }        
     }
 }

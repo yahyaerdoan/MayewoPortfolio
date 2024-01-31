@@ -23,7 +23,8 @@
     <form class="form-group" method="post">
         <div class="mb-3">
             <label for="title" class="form-label"><b>Title</b></label>
-            <input type="text" class="form-control" id="title" name="Title">
+            @*<input type="text" class="form-control" id="title" name="Title">*@           
+            @Html.TextBoxFor(x=>x.Title, new {@class = "form-control"})
         </div>
         <div class="mb-3">
             <label for="categoryId" class="form-label"><b>Category</b></label>
@@ -32,18 +33,21 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label"><b>Description</b></label>
-            <input type="text" class="form-control" id="description" name="Description">
+            @*<input type="text" class="form-control" id="description" name="Description">*@
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
         </div>
         <div class="mb-3">
             <label for="imageurl" class="form-label"><b>Image Url</b></label>
-            <input type="text" class="form-control" id="imageurl" name="ImageUrl">
+            @*<input type="text" class="form-control" id="imageurl" name="ImageUrl">*@
+            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
         </div>
         <div class="mb-3">
             <label for="projecturl" class="form-label"><b>Project Url</b></label>
-            <input type="text" class="form-control" id="projecturl" name="ProjectUrl">
+            @*<input type="text" class="form-control" id="projecturl" name="ProjectUrl">*@
+            @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
         </div>
         <button type="submit" class="btn btn-outline-primary">Submit New Project</button>        
-        <td><a href="/Project/Index/" type="button" class="btn btn-outline-success">Go Back To Project List</a></td>
+        <button  href="/Project/Index/" type="button" class="btn btn-outline-success">Go Back To Project List</button>
     </form>
     <!-- End Example Code -->
 </body>

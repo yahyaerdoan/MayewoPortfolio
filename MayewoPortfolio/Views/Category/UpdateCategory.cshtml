@@ -1,6 +1,6 @@
-﻿@model MayewoPortfolio.Models.Aboute
+﻿@model MayewoPortfolio.Models.Category
 @{
-    ViewBag.Title = "UpdateAbout";
+    ViewBag.Title = "UpdateCategory";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 <!doctype html>
@@ -22,22 +22,11 @@
         <div class="card-body" style="background-color:ghostwhite">
             <div class="mb-3">
                 <form method="post" action="">
-                   
-
                     <label for="aboutid" class="form-label"><b>About Id</b></label>
-                    <input type="text" class="form-control" id="aboutid" value="@Model.AboutId" name="AboutId">
+                    <input type="text" class="form-control" id="aboutid" value="@Model.CategoryId" name="CategoryId">
 
-                    <label for="title" class="form-label"><b>Title</b></label>
-                    <input type="text" class="form-control" id="title" value="@Model.Title" name="Title">
-
-                    <label for="header" class="form-label"><b>Header</b></label>
-                    <input type="text" class="form-control" id="header" value="@Model.Header" name="Header">
-
-                    <label for="description" class="form-label"><b>Description</b></label>
-                    <textarea class="form-control" id="description" name="Description" rows="6">@Model.Description</textarea>
-
-                    <label for="imageurl" class="form-label"><b>Image Url</b></label>
-                    <input type="text" class="form-control" id="imageurl" value="@Model.ImageUrl" name="ImageUrl">
+                    <label for="name" class="form-label"><b>Name</b></label>
+                    <input type="text" class="form-control" id="name" value="@Model.Name" name="Name">
 
                     <button type="submit" class="btn btn-outline-success">Save Changes</button>
                     <button href="/About/Index/" type="submit" class="btn btn-outline-warning">Go Back</button>
@@ -47,3 +36,4 @@
     </div>
 </body>
 </html>
+

@@ -37,5 +37,26 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult UpdateCommunication(int id)
+        {
+            var value = myPortfolioEntities.Communications.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateCommunication(Communication communication)
+        {
+            var value = myPortfolioEntities.Communications.Find(communication.ContactId);
+            value.NameSurname = communication.NameSurname;
+            value.Email = communication.Email;
+            value.CatgoryId = communication.CatgoryId;
+            value.Message = communication.Message;
+            value.SendDate = communication.SendDate;
+            value.IsRead = communication.IsRead;
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -34,5 +34,6 @@ namespace MayewoPortfolio.Models
         public virtual DbSet<SocialMedia> SocialMedias { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Testimonial> Testimonials { get; set; }
+        public virtual DbSet<AdminSideBar> AdminSideBars { get; set; }
     }
 }

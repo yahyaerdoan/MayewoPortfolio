@@ -1,6 +1,6 @@
-﻿@model MayewoPortfolio.Models.Aboute
+﻿@model MayewoPortfolio.Models.Service
 @{
-    ViewBag.Title = "UpdateAbout";
+    ViewBag.Title = "UpdateService";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 <!doctype html>
@@ -17,21 +17,16 @@
 <body>
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title"> Update About</h5>
+            <h5 class="card-title"> Update Service</h5>
         </div>
         <div class="card-body" style="background-color:ghostwhite">
             <div class="mb-3">
                 <form method="post" action="">
-                   
-
-                    <label for="aboutid" class="form-label"><b>About Id</b></label>
-                    <input type="text" class="form-control" id="aboutid" value="@Model.AboutId" name="AboutId">
+                    <label for="serviceid" class="form-label"><b>Service Id</b></label>
+                    <input type="text" class="form-control" id="serviceid" value="@Model.ServiceId" name="serviceid">
 
                     <label for="title" class="form-label"><b>Title</b></label>
                     <input type="text" class="form-control" id="title" value="@Model.Title" name="Title">
-
-                    <label for="header" class="form-label"><b>Header</b></label>
-                    <input type="text" class="form-control" id="header" value="@Model.Header" name="Header">
 
                     <label for="description" class="form-label"><b>Description</b></label>
                     <textarea class="form-control" id="description" name="Description" rows="6">@Model.Description</textarea>
@@ -40,7 +35,7 @@
                     <input type="text" class="form-control" id="imageurl" value="@Model.ImageUrl" name="ImageUrl">
 
                     <button type="submit" class="btn btn-outline-success">Save Changes</button>
-                    <button href="/About/Index/" type="submit" class="btn btn-outline-warning">Go Back</button>
+                    <button href="/Service/Index/" type="submit" class="btn btn-outline-warning">Go Back</button>
                 </form>
             </div>
         </div>

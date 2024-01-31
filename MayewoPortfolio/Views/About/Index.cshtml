@@ -11,7 +11,7 @@
         <th>Id</th>
         <th>Title</th>
         <th>Header</th>
-        <th>Descriptions</th>
+        <th>Description</th>
         <th>Image</th>
         <th>Update</th>
         <th>Remove</th>
@@ -24,8 +24,8 @@
             <td>@item.Header</td>
             <td>@item.Description</td>
             <td>@item.ImageUrl</td>
-            <td><a href="/About/UpdateAbout/@item.AboutId" type="button" class="btn btn-outline-success">Update</a></td>
-            <td><a href="/About/RemoveAbout/@item.AboutId" type="button" class="btn btn-outline-danger">Remove</a></td>
+            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Update</a></td>
+            <td><a href="/About/RemoveAbout/@item.AboutId" class="btn btn-outline-danger">Remove</a></td>
         </tr>
     }
 </table>

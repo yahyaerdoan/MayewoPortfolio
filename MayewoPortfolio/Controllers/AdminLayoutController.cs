@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MayewoPortfolio.Models;
 
 namespace MayewoPortfolio.Controllers
 {
     public class AdminLayoutController : Controller
     {
         // GET: AdminLayout
+        MyPortfolioEntities myPortfolioEntities = new MyPortfolioEntities();
         public ActionResult _Layout()
         {
             return View();
@@ -20,6 +22,7 @@ namespace MayewoPortfolio.Controllers
         } 
         public PartialViewResult _SideBarPartial()
         {
+            ViewBag.van = "Hello";
             return PartialView();
         }
         public PartialViewResult _ScriptPartial()
