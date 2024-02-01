@@ -36,5 +36,23 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult UpdateSocialMedia(int id)
+        {
+            var value = myPortfolioEntities.SocialMedias.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateSocialMedia(SocialMedia socialMedia)
+        {
+            var value = myPortfolioEntities.SocialMedias.Find(socialMedia.SocialMediaId);
+            value.Title = socialMedia.Title;
+            value.Url = socialMedia.Url;
+            value.Icon = socialMedia.Icon;
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

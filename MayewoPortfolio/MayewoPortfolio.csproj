@@ -574,6 +574,8 @@
     <Content Include="Views\Communication\UpdateCommunication.cshtml" />
     <Content Include="Views\Future\UpdateFuture.cshtml" />
     <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -36,5 +36,24 @@ namespace MayewoPortfolio.Controllers
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult UpdateTestimonial(int id)
+        {
+            var value = myPortfolioEntities.Testimonials.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateTestimonial(Testimonial testimonial)
+        {
+            var value = myPortfolioEntities.Testimonials.Find(testimonial.TestimonialId);
+            value.NameSurname = testimonial.NameSurname;
+            value.Description = testimonial.Description;
+            value.ImageUrl = testimonial.ImageUrl;
+            value.Statu = testimonial.Statu;
+            myPortfolioEntities.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
