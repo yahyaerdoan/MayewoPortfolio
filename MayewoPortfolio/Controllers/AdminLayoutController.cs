@@ -22,8 +22,7 @@ namespace MayewoPortfolio.Controllers
         } 
         public PartialViewResult _SideBarPartial()
         {
-            ViewBag.van = "Hello";
-            return PartialView();
+          return PartialView();
         }
         public PartialViewResult _ScriptPartial()
         {
