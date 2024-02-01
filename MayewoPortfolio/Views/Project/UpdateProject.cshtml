@@ -25,26 +25,28 @@
 
 
                     <label for="projectid" class="form-label"><b>Project Id</b></label>
-                    <input type="text" class="form-control" id="projectid" value="@Model.ProjectId" name="ProjectId">
+                    <input type="text" class="form-control" id="projectid" readonly value="@Model.ProjectId" name="ProjectId">
 
-                    <label for="categoryid" class="form-label"><b>Category</b></label>
+                    <label for="categoryid" class="form-label, mt-2"><b>Category</b></label>
                     @*<input type="text" class="form-control" id="categoryid" value="@Model.Category.Name" name="CategoryId">*@
                     @Html.DropDownListFor(c => c.CategoryId, (List<SelectListItem>)ViewBag.values, new { @class = "form-control", id = "categoryid" })
 
-                    <label for="title" class="form-label"><b>Title</b></label>
+                    <label for="title" class="form-label, mt-2"><b>Title</b></label>
                     <input type="text" class="form-control" id="title" value="@Model.Title" name="Title">
 
-                    <label for="description" class="form-label"><b>Description</b></label>
+                    <label for="description" class="form-label, mt-2"><b>Description</b></label>
                     <textarea class="form-control" id="description" name="Description" rows="6">@Model.Description</textarea>
 
-                    <label for="imageurl" class="form-label"><b>Image Url</b></label>
+                    <label for="imageurl" class="form-label, mt-2"><b>Image Url</b></label>
                     <input type="text" class="form-control" id="imageurl" value="@Model.ImageUrl" name="ImageUrl">
 
-                    <label for="projecturl" class="form-label"><b>Github Url</b></label>
+                    <label for="projecturl" class="form-label, mt-2"><b>Github Url</b></label>
                     <input type="text" class="form-control" id="projecturl" value="@Model.ProjectUrl" name="ProjectUrl">
 
-                    <button type="submit" class="btn btn-outline-success">Save Changes</button>
-                    <button href="/Project/Index/" type="submit" class="btn btn-outline-warning">Go Back</button>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-outline-success" style="margin-right: 5px;">Save Changes</button>
+                        <button href="/Project/Index/" type="submit" class="btn btn-outline-warning">Go Back</button>
+                    </div>                    
                 </form>
             </div>
         </div>

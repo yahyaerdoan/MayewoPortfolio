@@ -37,8 +37,8 @@ namespace MayewoPortfolio.Controllers
         [HttpPost]
         public ActionResult CreateNewProject(Project project)
         {
-            var category = myPortfolioEntities.Categories.Where(c => c.CategoryId == project.CategoryId).FirstOrDefault();
-            project.Category = category;
+            //var category = myPortfolioEntities.Categories.Where(c => c.CategoryId == project.CategoryId).FirstOrDefault();
+            //project.Category = category;
             myPortfolioEntities.Projects.Add(project);
             myPortfolioEntities.SaveChanges();
             return RedirectToAction("CreateNewProject");
@@ -66,8 +66,8 @@ namespace MayewoPortfolio.Controllers
             var value = myPortfolioEntities.Projects.Find(project.ProjectId);
             value.Title = project.Title;
             value.Description = project.Description;
-            var categoryname = myPortfolioEntities.Categories.Where(c => c.CategoryId == project.CategoryId).FirstOrDefault();
-            project.Category = categoryname;
+            //var categoryname = myPortfolioEntities.Categories.Where(c => c.CategoryId == project.CategoryId).FirstOrDefault();
+            //project.Category = categoryname;
             value.CategoryId = project.CategoryId;
             value.ImageUrl = project.ImageUrl;
             value.ProjectUrl = project.ProjectUrl;
