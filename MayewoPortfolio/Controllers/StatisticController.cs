@@ -25,6 +25,14 @@ namespace MayewoPortfolio.Controllers
             ViewBag.lastProjectName = myPortfolioEntities.LastProjectName().FirstOrDefault();
             ViewBag.lastAspNetCoreMvcProject = myPortfolioEntities.LastAspNetCoreMvcProject().FirstOrDefault().Title;
             ViewBag.aspNetCoreMvcProjectCount = myPortfolioEntities.Projects.Where(x => x.CategoryId == 10).Count();
+            var values = myPortfolioEntities.Projects.GroupBy(x => x.CategoryId).Select(x => new
+            {
+                Count = x.Count(),
+                Key = x.Key,
+            }).ToList();
+            var value = values.Where(x => x.Count == values.Max(y => y.Count)).Select(z => z.Key).FirstOrDefault();
+            var valueName = myPortfolioEntities.Categories.Where(x => x.CategoryId == value).FirstOrDefault();
+            ViewBag.categoryWithTheMostProjects = valueName.Name;
             return View();
         }
     }

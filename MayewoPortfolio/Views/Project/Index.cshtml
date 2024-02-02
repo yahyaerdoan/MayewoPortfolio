@@ -11,6 +11,7 @@
         <th>Title</th>      
         <th>Category</th>      
         <th>Description</th>
+        <th>Image</th>
         <th>Update</th>
         <th>Remove</th>
         <th>Github Url</th>
@@ -22,9 +23,10 @@
             <td>@item.Title</td>
             <td>@item.Category.Name</td>
             <td>@item.Description</td>            
+            <td>@item.ImageUrl</td>            
             <td><a href="/Project/UpdateProject/@item.ProjectId" type="button" class="btn btn-outline-success">Update</a></td>
             <td><a href="/Project/RemoveProject/@item.ProjectId" type="button" class="btn btn-outline-danger">Remove</a></td>
-            <td><a href="/Project/OpenUrl/@item.ProjectId" type="button" class="btn btn-outline-dark">Open on Github</a></td>
+            <td><a href="@item.ProjectUrl" type="button" class="btn btn-outline-dark">GitHub</a></td>
         </tr>
     }
 </table>

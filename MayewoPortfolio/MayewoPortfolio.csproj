@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CommunicationController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FutureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -275,7 +276,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\apartmant.svg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\apiproject.svg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\aspcon.svg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\aspnet.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\css\meyawo.css" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\algoritmaq.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\analytics.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
@@ -306,6 +312,9 @@
     <Content Include="Templates\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.svg" />
     <Content Include="Templates\meyawo-1.0.0\components.html" />
     <Content Include="Templates\meyawo-1.0.0\index.html" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\availability-svgrepo-com.svg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\maintenance.png" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\systemmaintenance.svg" />
     <Content Include="Templates\sidebar-09\css\bootstrap.min.css" />
     <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_screen-reader.css" />
@@ -588,6 +597,8 @@
     <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
     <Content Include="Views\Default\BootstrapIconPartial.cshtml" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\YahyaERDOGANResume.pdf" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

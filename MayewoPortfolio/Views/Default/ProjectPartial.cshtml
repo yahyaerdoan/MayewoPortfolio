@@ -8,8 +8,8 @@
             @foreach (var item in Model)
             {
                 <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="~/Templates/meyawo-1.0.0/assets/imgs/folio-3.jpg" class="img-responsive rounded"
+                    <a href="@item.ProjectUrl" class="portfolio-card">
+                        <img class="portfolio-card-img" src="@item.ImageUrl" class="img-responsive rounded"
                              alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
@@ -22,7 +22,6 @@
                         </span>
                     </a>
                 </div>
-
             }
         </div><!-- end of row -->
     </div><!-- end of container -->

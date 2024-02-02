@@ -28,6 +28,5 @@ namespace MayewoPortfolio.Controllers
         {
             return PartialView();
         }
-
     }
 }
