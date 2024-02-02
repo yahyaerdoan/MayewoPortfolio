@@ -145,5 +145,10 @@ namespace MayewoPortfolio.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
+    
+        public virtual ObjectResult<LastAspNetCoreMvcProject_Result> LastAspNetCoreMvcProject()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LastAspNetCoreMvcProject_Result>("LastAspNetCoreMvcProject");
+        }
     }
 }

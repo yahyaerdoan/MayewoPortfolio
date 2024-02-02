@@ -1,20 +1,117 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="card text-center">
+        <div class="card-header bg-info-subtle">
+            <h4>Statistics</h4>
+        </div>
+        <div class="card-body">
+            <div class="card text-bg-primary float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Category Count</h5>
+                    <p class="card-text"> @ViewBag.categoryCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-secondary float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Project Count</h5>
+                    <p class="card-text">@ViewBag.projectCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-success float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Message Count</h5>
+                    <p class="card-text">@ViewBag.messageCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-danger float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Flutter Project Count</h5>
+                    <p class="card-text">@ViewBag.flutterProjectCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-warning float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Service Count</h5>
+                    <p class="card-text">@ViewBag.totalSrviceCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-info float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Unread Message Count</h5>
+                    <p class="card-text">@ViewBag.isNotReadMessageCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-light float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Read Message Count</h5>
+                    <p class="card-text">@ViewBag.ReadMessageCount</p>
+                </div>
+            </div>
+            <div class="card text-bg-dark float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Last Project Name</h5>
+                    <p class="card-text">@ViewBag.lastProjectName</p>
+                </div>
+            </div>
+            <div class="card text-bg-primary float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Last Asp.Net Core Mvc Project Name</h5>
+                    <p class="card-text">@ViewBag.lastAspNetCoreMvcProject</p>
+                </div>
+            </div>
+            <div class="card text-bg-secondary float-left mb-3 mr-4" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Asp.Net Core Mvc Project Count</h5>
+                    <p class="card-text">@ViewBag.aspNetCoreMvcProjectCount</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-body-secondary bg-info-subtle">
+            Go work, do well !
+        </div>
+    </div>
+</body>
+</html>
 
-<h2>İstatistikler</h2>
+@*<h2>Statistics</h2>
 
-<div class="alert alert-danger">Kategori Sayısı: @ViewBag.categoryCount</div>
+<div class="alert alert-danger">Total Category Count : @ViewBag.categoryCount</div>
 
-<div class="alert alert-warning">Proje Sayısı: @ViewBag.projectCount</div>
+<div class="alert alert-warning">Total Project Count : @ViewBag.projectCount</div>
 
-<div class="alert alert-info">Mesaj Sayısı: @ViewBag.messageCount</div>
+<div class="alert alert-info">Total Message Count : @ViewBag.messageCount</div>
 
-<div class="alert alert-dark">Flutter Proje Sayısı: @ViewBag.flutterProjectCount</div>
+<div class="alert alert-dark">Total Flutter Project Sayısı: @ViewBag.flutterProjectCount</div>
 
-<div class="alert alert-primary">Okunmamış Mesaj Sayısı: @ViewBag.isNotReadMessageCount</div>
+<div class="alert alert-dark">Total Service Count : @ViewBag.totalSrviceCount</div>
 
-<div class="alert alert-success">Eklenen Son Proje Adı: @ViewBag.lastProjectName</div>
+<div class="alert alert-primary">Total Non Read Message Count : @ViewBag.isNotReadMessageCount</div>
 
+<div class="alert alert-primary">Total Read Message Count : @ViewBag.ReadMessageCount</div>
+
+<div class="alert alert-success">Last Project Name : @ViewBag.lastProjectName</div>
+
+<div class="alert alert-success">Last Asp.Net Core Mvc Project Name : @ViewBag.lastAspNetCoreMvcProject</div>*@
