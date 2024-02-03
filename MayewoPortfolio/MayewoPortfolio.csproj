@@ -314,6 +314,16 @@
     <Content Include="Templates\meyawo-1.0.0\index.html" />
     <Content Include="Templates\meyawo-1.0.0\ProjectDocument\availability-svgrepo-com.svg" />
     <Content Include="Templates\meyawo-1.0.0\ProjectDocument\maintenance.png" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\palphastellar.png" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pbakeryproducts.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pcarproject.png" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pellisa.jpeg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pgardenmaintenance.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pjohn.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pmarkit.png" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pmayewo.png" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\pmelissa.jpeg" />
+    <Content Include="Templates\meyawo-1.0.0\ProjectDocument\psienna.jpg" />
     <Content Include="Templates\meyawo-1.0.0\ProjectDocument\systemmaintenance.svg" />
     <Content Include="Templates\sidebar-09\css\bootstrap.min.css" />
     <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_border-radius.css" />
